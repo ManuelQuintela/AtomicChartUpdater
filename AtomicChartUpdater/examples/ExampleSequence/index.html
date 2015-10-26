@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script data-main="main" src="../../lib/require.js"></script>
+    <script type="text/javascript" src="../../lib/requireConfig.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<h1>Sequential Chart</h1>
+<canvas id="myChart" width="1200" height="550"></canvas>
+<p></p>
+<button onclick="lineChartUtil.updateSequence('dollar', 20, 500, 0);">Add 20 elements</button>
+<button onclick="lineChartUtil.updateSequence('dollar', 10, 500, 0);">Add 10 elements</button>
+<button onclick="lineChartUtil.updateSequence('dollar', 5, 500, 0);">Add 5 elements</button>
+<p></p>
+<button onclick="lineChartUtil.updateSequence('dollar', 20, 500, 3);">Add 20 elements (30% chance errors)</button>
+<button onclick="lineChartUtil.updateSequence('dollar', 10, 500, 3);">Add 10 elements (30% chance errors)</button>
+<button onclick="lineChartUtil.updateSequence('dollar', 5, 500, 3);">Add 5 elements (30% chance errors)</button>
+
+</body>
+</html>
