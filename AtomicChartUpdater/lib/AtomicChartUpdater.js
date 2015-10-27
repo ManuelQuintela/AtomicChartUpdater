@@ -1,4 +1,4 @@
-define(["clone", 'ajaxCall', "Reconstructors.min"], function (clone, ajaxCall, reconstructors) {
+define(["../../lib/clone", '../../lib/ajaxCall', "../../lib/Reconstructors.min"], function (clone, ajaxCall, reconstructors) {
 
     var ChartUpdater = function (chart, minNumOfErrorsToRevert) {
         this.chart = chart;
@@ -22,11 +22,11 @@ define(["clone", 'ajaxCall', "Reconstructors.min"], function (clone, ajaxCall, r
             };
 
             for (var i = 0; i < chart.datasets.length; i++) {
-                reconstructors.reconstructable.object.array(chart.datasets[i], "points");
+                reconstructable.object.array(chart.datasets[i], "points");
             }
-            reconstructors.reconstructable.object.array(this.chart.scale, "xLabels");
-            reconstructors.reconstructable.object.reconstructionAsync(this, "ajaxUpdate", new ReconstructionOptions(null, null, null, null, this.minNumOfErrorsToRevert, updateFunction));
-            reconstructors.reconstructable.object.reconstructionAsync(this, "sequentialAjaxUpdate", new ReconstructionOptions(null, null, null, null, this.minNumOfErrorsToRevert, updateFunction));
+            reconstructable.object.array(this.chart.scale, "xLabels");
+            reconstructable.object.reconstructionAsync(this, "ajaxUpdate", new ReconstructionOptions(null, null, null, null, this.minNumOfErrorsToRevert, updateFunction));
+            reconstructable.object.reconstructionAsync(this, "sequentialAjaxUpdate", new ReconstructionOptions(null, null, null, null, this.minNumOfErrorsToRevert, updateFunction));
         },
 
         changeMinNumOfErrorsToRevert: function (minNumOfErrorsToRevert) {

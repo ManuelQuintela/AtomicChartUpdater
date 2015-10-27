@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script data-main="main" src="../../lib/require.js"></script>
-    <script type="text/javascript" src="../../lib/requireConfig.js"></script>
+    <script type="text/javascript" src="../../lib/Chart.min.js"></script>
+    <script type="text/javascript" src="AtomicChartUpdater.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
     <meta charset="UTF-8">
     <title></title>
 </head>
-<body>
+<body onload="lineChartUtil.initializeChart()">
 
 <h1>Parallel Chart</h1>
 <canvas id="myChart" width="1200" height="550"></canvas>
